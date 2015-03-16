@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
-
+using System.Linq;
+using AppSterdam.Xamarin.Shared.Entities;
+using AppSterdam.Xamarin.Shared.Services;
 using Foundation;
 using UIKit;
 
@@ -57,6 +60,9 @@ namespace AppSterdam.Xamarin.iOS
 			RssService service = new RssService();
 			IEnumerable<FeedItem> items = await service.GetNews("http://feeds.feedburner.com/qmatteoq_eng");
 
+			string message = string.Format("Number of news: {0}", items.Count());
+			UIAlertView alert = new UIAlertView("News", message, null, "Ok", null);
+			alert.Show();
 		}
 	}
 }

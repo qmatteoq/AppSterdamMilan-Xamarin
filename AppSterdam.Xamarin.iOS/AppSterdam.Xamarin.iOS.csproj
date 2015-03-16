@@ -118,5 +118,11 @@
   <ItemGroup>
     <Content Include="Entitlements.plist" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppSterdam.Xamarin.Shared\AppSterdam.Xamarin.Shared.csproj">
+      <Project>{d2df0c77-203b-47b8-ab6d-100d2f05a8c9}</Project>
+      <Name>AppSterdam.Xamarin.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
