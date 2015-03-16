@@ -52,5 +52,11 @@ namespace AppSterdam.Xamarin.iOS
 		#endregion
 
 
+		partial void btnGetNews_TouchUpInside (UIButton sender)
+		{
+			RssService service = new RssService();
+			IEnumerable<FeedItem> items = await service.GetNews("http://feeds.feedburner.com/qmatteoq_eng");
+
+		}
 	}
 }
